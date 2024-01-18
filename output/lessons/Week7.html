@@ -7,9 +7,6 @@
   <title>Week7</title>
   <style>
     html {
-      line-height: 1.5;
-      font-family: Georgia, serif;
-      font-size: 20px;
       color: #1a1a1a;
       background-color: #fdfdfd;
     }
@@ -28,13 +25,16 @@
     @media (max-width: 600px) {
       body {
         font-size: 0.9em;
-        padding: 1em;
+        padding: 12px;
       }
       h1 {
         font-size: 1.8em;
       }
     }
     @media print {
+      html {
+        background-color: white;
+      }
       body {
         background-color: transparent;
         color: black;
@@ -58,6 +58,10 @@
       color: #1a1a1a;
     }
     img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
       max-width: 100%;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -84,9 +88,10 @@
       color: #606060;
     }
     code {
-      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
+      hyphens: manual;
     }
     pre {
       margin: 1em 0;
@@ -148,23 +153,29 @@
     }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
   type="text/javascript"></script>
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
 </head>
 <body>
 <div class="flushright">
 
 </div>
-<h1 class="unnumbered" id="monday-may-9">Monday May 9</h1>
+<h1 class="unnumbered" id="monday">Monday</h1>
 <div class="center">
 <table>
 <tbody>
@@ -229,16 +240,39 @@ class="math inline">\(L\)</span> then …</td>
 </tbody>
 </table>
 </div>
-<p><span><strong>Describing Turing machines</strong></span> (Sipser p.
-185)</p>
-<p>The Church-Turing thesis posits that each algorithm can be
-implemented by some Turing machine</p>
-<p>High-level descriptions of Turing machine algorithms are written as
-indented text within quotation marks.</p>
-<p>Stages of the algorithm are typically numbered consecutively.</p>
-<p>The first line specifies the input to the machine, which must be a
-string. This string may be the encoding of some object or list of
-objects.</p>
+<p>A language <span class="math inline">\(L\)</span> is
+<span><strong>recognized by</strong></span> a Turing machine <span
+class="math inline">\(M\)</span> means</p>
+<p>A Turing machine <span class="math inline">\(M\)</span>
+<span><strong>recognizes</strong></span> a language <span
+class="math inline">\(L\)</span> if means</p>
+<p>A Turing machine <span class="math inline">\(M\)</span> is a
+<span><strong>decider</strong></span> means</p>
+<p>A language <span class="math inline">\(L\)</span> is
+<span><strong>decided by</strong></span> a Turing machine <span
+class="math inline">\(M\)</span> means</p>
+<p>A Turing machine <span class="math inline">\(M\)</span>
+<span><strong>decides</strong></span> a language <span
+class="math inline">\(L\)</span> means</p>
+<p><span><em>From Friday’s review quiz:</em> </span> Which of the
+following sentences make sense? Which of those are true?</p>
+<p>A language is a decider if it always halts.</p>
+<p>The union of two deciders is a decider.</p>
+<p>A language is decidable if and only if it is recognizable.</p>
+<p>There is a Turing machine that isn’t decidable.</p>
+<p>There is a recognizable language that isn’t decided by any Turing
+machine.</p>
+<p><span><strong>Claim</strong></span>: If two languages (over a fixed
+alphabet <span class="math inline">\(\Sigma\)</span>) are
+Turing-recognizable, then their union is as well.</p>
+<p><span><strong>Proof using Turing machines</strong></span>:</p>
+<p><span><strong>Proof using nondeterministic Turing
+machines</strong></span>:</p>
+<p><span><strong>Proof using enumerators</strong></span>:</p>
+<p>The first line of a <span><strong>high-level
+description</strong></span> of a Turing machine specifies the input to
+the machine, which must be a string. This string may be the encoding of
+some object or list of objects.</p>
 <p><span><strong>Notation:</strong></span> <span
 class="math inline">\(\langle O \rangle\)</span> is the string that
 encodes the object <span class="math inline">\(O\)</span>. <span
@@ -271,22 +305,43 @@ class="math display">\[\begin{aligned}
   &amp;\{ \textrm{representations of DFAs $M$ and strings $w$ such that
 $w \in L(M)$}\}  \\
   =&amp; \{ \langle M, w \rangle \mid M \textrm{ is a DFA}, w \textrm{
-is a string}, w \in L(M) \}\end{aligned}\]</span></p>
+is a string}, w \in L(M) \}
+\end{aligned}\]</span></p>
 <p>The computational problem “Is the language generated by a CFG empty?”
 is encoded by the language <span class="math display">\[\begin{aligned}
   &amp;\{ \textrm{representations of CFGs $G$  such that $L(G) =
 \emptyset$}\}  \\
-  =&amp; \{ \langle G \rangle \mid M \textrm{ is a CFG},  L(G) =
-\emptyset \}\end{aligned}\]</span></p>
+  =&amp; \{ \langle G \rangle \mid G \textrm{ is a CFG},  L(G) =
+\emptyset \}
+\end{aligned}\]</span></p>
 <p>The computational problem “Is the given Turing machine a decider?” is
 encoded by the language <span class="math display">\[\begin{aligned}
   &amp;\{ \textrm{representations of TMs $M$  such that $M$ halts on
 every input}\}  \\
-  =&amp; \{ \langle G \rangle \mid M \textrm{ is a TM and for each
-string } w, \textrm{$M$ halts on $w$} \}\end{aligned}\]</span></p>
+  =&amp; \{ \langle M \rangle \mid M \textrm{ is a TM and for each
+string } w, \textrm{$M$ halts on $w$} \}
+\end{aligned}\]</span></p>
 <p><span><em>Note: writing down the language encoding a computational
 problem is only the first step in determining if it’s recognizable,
 decidable, or …</em></span></p>
+<h2 class="unnumbered" id="review-week-7-monday">Review: Week 7
+Monday</h2>
+<p>Recall: Review quizzes based on class material are assigned each day.
+These quizzes will help you track and confirm your understanding of the
+concepts and examples we work in class. Quizzes can be submitted on
+Gradescope as many times (with no penalty) as you like until the quiz
+deadline: the three quizzes each week are all due on Friday (with no
+penalty late submission open until Sunday).</p>
+<p>Please complete the review quiz questions on <a
+href="http://gradescope.com">Gradescope</a> about computational
+problems.</p>
+<p><span><strong>Pre class reading for next time</strong></span>:
+Decidable problems concerning regular languages, Sipser pages
+194-196.</p>
+<h2 class="unnumbered" id="wednesday">Wednesday</h2>
+<p>Deciding a computational problem means building / defining a Turing
+machine that recognizes the language encoding the computational problem,
+and that is a decider.</p>
 <p><span><strong>Some classes of computational problems help us
 understand the differences between the machine models we’ve been
 studying:</strong></span></p>
@@ -508,72 +563,6 @@ alt="image" /></td>
 <p>Example strings in <span class="math inline">\(A_{DFA}\)</span></p>
 <p>Example strings in <span class="math inline">\(E_{DFA}\)</span></p>
 <p>Example strings in <span class="math inline">\(EQ_{DFA}\)</span></p>
-<p>Food for thought: which of the following computational problems are
-decidable: <span class="math inline">\(A_{DFA}\)</span>?, <span
-class="math inline">\(E_{DFA}\)</span>?, <span
-class="math inline">\(EQ_{DFA}\)</span>?</p>
-<h2 class="unnumbered" id="review-week-7-monday">Review: Week 7
-Monday</h2>
-<p>Recall: Review quizzes based on class material are assigned each day.
-These quizzes will help you track and confirm your understanding of the
-concepts and examples we work in class. Quizzes can be submitted on
-Gradescope as many times (with no penalty) as you like until the quiz
-deadline: the three quizzes each week are all due on Friday (with no
-penalty late submission open until Sunday).</p>
-<p>Please complete the review quiz questions on <a
-href="http://gradescope.com">Gradescope</a> about computational
-problems.</p>
-<p><span><strong>Pre class reading for next time</strong></span>:
-Decidable problems concerning regular languages, Sipser pages
-194-196.</p>
-<h2 class="unnumbered" id="wednesday-may-11">Wednesday May 11</h2>
-<div class="center">
-<table>
-<tbody>
-<tr class="odd">
-<td colspan="3" style="text-align: left;"><span><strong>Acceptance
-problem</strong></span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">for …</td>
-<td style="text-align: center;"><span
-class="math inline">\(A_{\ldots}\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\{ \langle B,w
-\rangle \mid  \text{$B$ is a \ldots that accepts input
-  string $w$}\}\)</span></td>
-</tr>
-<tr class="odd">
-<td colspan="3" style="text-align: left;"><span><strong>Language
-emptiness testing</strong></span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">for …</td>
-<td style="text-align: center;"><span
-class="math inline">\(E_{\ldots}\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\{ \langle A
-\rangle \mid  \text{$A$ is a \ldots and  $L(A) =
-\emptyset$\}}\)</span></td>
-</tr>
-<tr class="odd">
-<td colspan="3" style="text-align: left;"><span><strong>Language
-equality testing</strong></span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">for …</td>
-<td style="text-align: center;"><span
-class="math inline">\(EQ_{\ldots}\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\{ \langle A,
-B \rangle \mid  \text{$A$ and $B$ are \ldots and  $L(A)
-=L(B)$\}}\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Sipser Section 4.1</td>
-<td style="text-align: center;"></td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-</div>
 <blockquote>
 <p><span class="math inline">\(M_1 =\)</span> “On input <span
 class="math inline">\(\langle M,w\rangle\)</span>, where <span
@@ -591,7 +580,7 @@ state of <span class="math inline">\(M\)</span>, reject. "</p></li>
 </ol>
 </blockquote>
 <p>What is <span class="math inline">\(L(M_1)\)</span>?</p>
-<p>Is <span class="math inline">\(L(M_1)\)</span> a decider?</p>
+<p>Is <span class="math inline">\(M_1\)</span> a decider?</p>
 <blockquote>
 <p><span class="math inline">\(M_2 =\)</span>“On input <span
 class="math inline">\(\langle M, w \rangle\)</span> where <span
@@ -605,7 +594,7 @@ class="math inline">\(w\)</span>.</p></li>
 </ol>
 </blockquote>
 <p>What is <span class="math inline">\(L(M_2)\)</span>?</p>
-<p>Is <span class="math inline">\(L(M_2)\)</span> a decider?</p>
+<p>Is <span class="math inline">\(M_2\)</span> a decider?</p>
 <p><span class="math inline">\(A_{REX} =\)</span></p>
 <p><span class="math inline">\(A_{NFA} =\)</span></p>
 <p>True / False: <span class="math inline">\(A_{REX} = A_{NFA} =
@@ -694,52 +683,72 @@ href="http://gradescope.com">Gradescope</a> about decidable
 computational problems.</p>
 <p><span><strong>Pre class reading for next time</strong></span>: An
 undecidable language, Sipser pages 207-209.</p>
-<h2 class="unnumbered" id="friday-may-13">Friday May 13</h2>
-<p>A <span><strong>Turing-recognizable</strong></span> language is a set
-of strings that is the language recognized by some Turing machine. We
-also say that such languages are recognizable.</p>
-<p>A <span><strong>Turing-decidable</strong></span> language is a set of
-strings that is the language recognized by some decider. We also say
-that such languages are decidable.</p>
-<p>An <span><strong>unrecognizable</strong></span> language is a
-language that is not Turing-recognizable.</p>
-<p>An <span><strong>undecidable</strong></span> language is a language
-that is not Turing-decidable.</p>
-<p><span><strong>True</strong></span> or
-<span><strong>False</strong></span>: Any undecidable language is also
-unrecognizable.</p>
-<p><span><strong>True</strong></span> or
-<span><strong>False</strong></span>: Any unrecognizable language is also
-undecidable.</p>
-<p>To prove that a computational problem is
-<span><strong>decidable</strong></span>, we find/ build a Turing machine
-that recognizes the language encoding the computational problem, and
-that is a decider.</p>
-<p>How do we prove a specific problem is <span><strong>not
-decidable</strong></span>?</p>
-<p>How would we even find such a computational problem?</p>
-<p><span><em>Counting arguments for the existence of an undecidable
-language:</em></span></p>
-<ul>
-<li><p>The set of all Turing machines is countably infinite.</p></li>
-<li><p>Each Turing-recognizable language is associated with a Turing
-machine in a one-to-one relationship, so there can be no more
-Turing-recognizable languages than there are Turing machines.</p></li>
-<li><p>Since there are infinitely many Turing-recognizable languages
-(think of the singleton sets), there are countably infinitely many
-Turing-recognizable languages.</p></li>
-<li><p>Such the set of Turing-decidable languages is an infinite subset
-of the set of Turing-recognizable languages, the set of Turing-decidable
-languages is also countably infinite.</p></li>
-</ul>
-<p>Since there are uncountably many languages (because <span
-class="math inline">\(\mathcal{P}{\Sigma^*}\)</span> is uncountable),
-there are uncountably many unrecognizable languages and there are
-uncountably many undecidable languages.</p>
-<p><span><strong>What’s a specific example of a language that is
-unrecognizable or undecidable?</strong></span></p>
-<p><span><strong>Key idea</strong></span>: self-referential
-disagreement.</p>
+<h2 class="unnumbered" id="friday">Friday</h2>
+<div class="center">
+<table>
+<tbody>
+<tr class="odd">
+<td colspan="3" style="text-align: left;"><span><strong>Acceptance
+problem</strong></span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">…for DFA</td>
+<td style="text-align: center;"><span
+class="math inline">\(A_{DFA}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\{ \langle B,w
+\rangle \mid  \text{$B$ is a  DFA that accepts input
+    string $w$}\}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">…for NFA</td>
+<td style="text-align: center;"><span
+class="math inline">\(A_{NFA}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\{ \langle B,w
+\rangle \mid  \text{$B$ is a  NFA that accepts input
+    string $w$}\}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">…for regular expressions</td>
+<td style="text-align: center;"><span
+class="math inline">\(A_{REX}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\{ \langle R,w
+\rangle \mid  \text{$R$ is a  regular
+    expression that generates input string $w$}\}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">…for CFG</td>
+<td style="text-align: center;"><span
+class="math inline">\(A_{CFG}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\{ \langle G,w
+\rangle \mid  \text{$G$ is a context-free grammar
+    that generates input string $w$}\}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">…for PDA</td>
+<td style="text-align: center;"><span
+class="math inline">\(A_{PDA}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\{ \langle B,w
+\rangle \mid  \text{$B$ is a PDA that accepts input string
+$w$}\}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="center">
 <table>
 <tbody>
@@ -811,18 +820,67 @@ class="math inline">\(L(R_{ATM}) = A_{TM}\)</span>.</p>
 <p>Define <span class="math inline">\(R_{ATM} =\)</span> “</p>
 <p>Proof of correctness:</p>
 <p>We will show that <span class="math inline">\(A_{TM}\)</span> is
+undecidable. <span><em>First, let’s explore what that
+means.</em></span></p>
+<p>A <span><strong>Turing-recognizable</strong></span> language is a set
+of strings that is the language recognized by some Turing machine. We
+also say that such languages are recognizable.</p>
+<p>A <span><strong>Turing-decidable</strong></span> language is a set of
+strings that is the language recognized by some decider. We also say
+that such languages are decidable.</p>
+<p>An <span><strong>unrecognizable</strong></span> language is a
+language that is not Turing-recognizable.</p>
+<p>An <span><strong>undecidable</strong></span> language is a language
+that is not Turing-decidable.</p>
+<p><span><strong>True</strong></span> or
+<span><strong>False</strong></span>: Any undecidable language is also
+unrecognizable.</p>
+<p><span><strong>True</strong></span> or
+<span><strong>False</strong></span>: Any unrecognizable language is also
 undecidable.</p>
+<p>To prove that a computational problem is
+<span><strong>decidable</strong></span>, we find/ build a Turing machine
+that recognizes the language encoding the computational problem, and
+that is a decider.</p>
+<p>How do we prove a specific problem is <span><strong>not
+decidable</strong></span>?</p>
+<p>How would we even find such a computational problem?</p>
+<p><span><em>Counting arguments for the existence of an undecidable
+language:</em></span></p>
+<ul>
+<li><p>The set of all Turing machines is countably infinite.</p></li>
+<li><p>Each Turing-recognizable language is associated with a Turing
+machine in a one-to-one relationship, so there can be no more
+Turing-recognizable languages than there are Turing machines.</p></li>
+<li><p>Since there are infinitely many Turing-recognizable languages
+(think of the singleton sets), there are countably infinitely many
+Turing-recognizable languages.</p></li>
+<li><p>Such the set of Turing-decidable languages is an infinite subset
+of the set of Turing-recognizable languages, the set of Turing-decidable
+languages is also countably infinite.</p></li>
+</ul>
+<p>Since there are uncountably many languages (because <span
+class="math inline">\(\mathcal{P}(\Sigma^*)\)</span> is uncountable),
+there are uncountably many unrecognizable languages and there are
+uncountably many undecidable languages.</p>
+<p>Thus, there’s at least one undecidable language!</p>
+<p><span><strong>What’s a specific example of a language that is
+unrecognizable or undecidable?</strong></span></p>
+<p>To prove that a language is undecidable, we need to prove that there
+is no Turing machine that decides it.</p>
+<p><span><strong>Key idea</strong></span>: proof by contradiction
+relying on self-referential disagreement.</p>
 <h2 class="unnumbered" id="review-week-7-friday">Review: Week 7
 Friday</h2>
 <p>Please complete the review quiz questions on <a
 href="http://gradescope.com">Gradescope</a> about undecidability and
 unrecognizability.</p>
-<section class="footnotes footnotes-end-of-document"
+<section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1" role="doc-endnote"><p>An introduction to ASCII is available
-on the w3 tutorial <a
+<li id="fn1"><p>An introduction to ASCII is available on the w3 tutorial
+<a
 href="https://www.w3schools.com/charsets/ref_html_ascii.asp">here</a>.<a
 href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>

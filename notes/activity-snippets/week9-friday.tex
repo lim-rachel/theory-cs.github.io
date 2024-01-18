@@ -1,0 +1,98 @@
+%! app: Decidable Languages, Undecidable Languages
+%! outcome: Classify language, Classify decision problem, Reduction, Nondeterminism
+ 
+Recall:  $A$ is  {\bf  mapping  reducible to} $B$, written $A \leq_m B$,  means there is a computable function 
+$f : \Sigma^* \to \Sigma^*$ such that {\it for all} strings  $x$ in $\Sigma^*$, 
+\[
+x  \in  A \qquad \qquad \text{if and  only  if} \qquad \qquad f(x) \in B.
+\]
+\[
+EQ_{TM} = \{ \langle M, M' \rangle \mid \text{$M$ and $M'$ are both Turing machines and $L(M) =L(M')$} \}
+\]
+
+Example  string in  $EQ_{TM}$ is \underline{\phantom{\hspace{1.5in}}} .
+Example  string not  in  $EQ_{TM}$ is \underline{\phantom{\hspace{1.5in}}} .
+
+$EQ_{TM}$ is ~~decidable /  undecidable~~ and ~~recognizable /  unrecognizable~~.
+
+$\overline{EQ_{TM}}$ is ~~decidable /  undecidable~~ and ~~recognizable /  unrecognizable~~.
+
+To  prove, show that  $\underline{\phantom{\hspace{1.6in}}}  \leq_m EQ_{TM}$
+and that $\underline{\phantom{\hspace{1.6in}}}  \leq_m \overline{EQ_{TM}}$.
+
+
+\vfill
+
+Verifying correctness:
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Input string &  Output string \\
+\hline
+$\langle M, w \rangle$ where  $M$ halts on $w$ & \phantom{\hspace{4in}} \\
+& \\
+$\langle M, w \rangle$ where $M$ loops on $w$ & \\
+&\\
+$x$ not encoding any pair of  TM and string   &  \\
+\hline
+\end{tabular}
+\end{center}
+
+\vfill
+
+\newpage
+
+In practice, computers (and Turing machines) don't have infinite tape, 
+and we can't afford to wait unboundedly long for an answer.
+``Decidable" isn't good enough - we want ``Efficiently decidable".
+
+For a given algorithm working on a given input, how long do we need to wait for an answer? 
+How does the running time depend on the input in the worst-case? average-case? 
+We expect to have to spend more time on computations with larger inputs.
+
+
+A language is {\bf recognizable} if \underline{\phantom{\hspace{4.5in}}}
+
+A language is {\bf decidable} if \underline{\phantom{\hspace{4.7in}}}
+
+A language is {\bf efficiently  decidable} if \underline{\phantom{\hspace{4in}}}
+
+A function is {\bf computable} if \underline{\phantom{\hspace{4.7in}}}
+
+A function is {\bf efficiently computable} if \underline{\phantom{\hspace{4in}}}\\
+
+\vfill
+
+Definition  (Sipser 7.1): For  $M$ a deterministic decider, its {\bf running time} is the function  $f: \mathbb{N} \to \mathbb{N}$
+given  by
+\[
+f(n) =  \text{max number of  steps $M$ takes before halting, over all inputs  of length $n$}
+\]
+
+Definition (Sipser 7.7): For each function $t(n)$, the {\bf time complexity class}  $TIME(t(n))$, is defined  by
+\[
+TIME( t(n)) = \{ L \mid \text{$L$ is decidable by  a Turing machine with running time in  $O(t(n))$} \}
+\]
+
+An example of an element of  $TIME(  1  )$ is 
+
+An example of an element of  $TIME(  n  )$ is 
+
+
+Note: $TIME( 1) \subseteq TIME (n)  \subseteq TIME(n^2)$
+
+\vfill
+
+Definition (Sipser 7.12) : $P$ is the class of languages that  are decidable in polynomial time on 
+a deterministic 1-tape  Turing  machine
+\[
+P  =  \bigcup_k TIME(n^k)
+\]
+
+{\it Compare to exponential time: brute-force search.}
+
+
+Theorem (Sipser 7.8): Let $t(n)$ be a  function with  $t(n)  \geq n$.  Then every $t(n)$ time deterministic 
+multitape Turing machine has an equivalent $O(t^2(n))$ time deterministic 1-tape Turing machine.
+
+\newpage
