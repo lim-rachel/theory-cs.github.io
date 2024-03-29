@@ -1,49 +1,37 @@
 [
    {
-      "name": "hw1-definitions-and-notation-CSE20F21",
+      "name": "hw1-definitions-and-notation-CSE20S24",
       "addExtensions": true,
-      "Information": "This is a group optional assignment",
-      "solutionsFile": "hw1-sol-CSE20F21.pdf"
+      "Information": "This is a group optional assignment"
    },
    {
-      "name": "hw2-numbers-CSE20F21",
+      "name": "hw2-numbers-CSE20S24",
       "addExtensions": true,
-      "Information": "This is a group optional assignment",
-      "solutionsFile": "hw2-sol-CSE20F21.pdf"
+      "Information": "This is a group optional assignment"
    },
    {
-      "name": "hw3-circuits-and-logic-CSE20F21",
+      "name": "hw3-circuits-and-logic-CSE20S24",
       "addExtensions": true,
-      "Information": "This is a group optional assignment",
-      "solutionsFile": "hw3-sol-CSE20F21.pdf"
+      "Information": "This is a group optional assignment"
    },
    {
-      "name": "hw4-proofs-and-sets-CSE20F21",
+      "name": "hw4-proofs-and-sets-CSE20S24",
       "addExtensions": true,
-      "Information": "This is a group optional assignment",
-      "solutionsFile": "hw4-sol-CSE20F21.pdf"
+      "Information": "This is a group optional assignment"
    },
    {
-      "name": "hw5-proofs-and-induction-CSE20F21",
+      "name": "hw5-proofs-and-induction-CSE20S24",
       "addExtensions": true,
-      "Information": "This is a group optional assignment",
-      "solutionsFile": "hw5-sol-CSE20F21.pdf"
+      "Information": "This is a group optional assignment"
    },
    {
-      "name": "hw6-proofs-numbers-cardinality-CSE20F21",
+      "name": "hw6-proof-cardinality-relations-CSE20S24",
       "addExtensions": true,
-      "Information": "This is a group optional assignment",
-      "solutionsFile": "hw6-sol-CSE20F21.pdf"
+      "Information": "This is a group optional assignment"
    },
    {
-      "name": "hw7-functions-and-relations-CSE20F21",
+      "name": "project-CSE20S24",
       "addExtensions": true,
-      "Information": "This is a group optional assignment",
-      "solutionsFile": "hw7-sol-CSE20F21.pdf"
-   },
-   {
-      "name": "project-CSE20F21",
-      "addExtensions": true,
-      "Information": "Part 1 due: 10/14/2021<br>Part 2 due: 11/4/2021<br>Part 3 due: 12/2/2021,<br>This is an Individual Assignment"
+      "Information": "This is an Individual Assignment"
    }
 ]

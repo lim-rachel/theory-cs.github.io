@@ -11,12 +11,13 @@ def build_sidebar(titleHref, titleName, overviewHref, overviewName, overviewIcon
 	#unit view must have smaller width
 	if(smallWidth):
 		sidebarButtons+= """id=\"unit\""""
-	sidebarButtons+="""><div class="logo-details"><div class="logo_name">
-	<i class='bx bx-home-smile'></i> </div> """
+	sidebarButtons+=""">"""
+	
+	sidebarButtons += """
+		<li><a href= " courseInfo.html" aria-label="Go to Home "><i class='bx bx-home-smile'></i><span class="links_name"> Home</span></a><span class="tooltip"> Home</span></li>
+	"""
 
-	sidebarButtons += """ <a href=""" + titleHref +""" class="logo_name">""" + titleName + """</a> <!--NAME-->
-			<i class='bx bx-chevron-right' id="btn" ></i>
-			</div>
+	sidebarButtons += """
 			
 			<ul class="nav-list">
 			
@@ -95,7 +96,7 @@ def build_mobile_sidebar(titleHref, titleName, overviewHref, overviewName, mobil
 def build_head_html(title):
 	headHtml = """<head>
 	<!-- logo on tab-->
-	<link rel="shortcut icon" href="../resources/images/musicalchairs.png" type="image/x-icon">
+	<link rel="shortcut icon" href="../resources/images/wood-951875_960_720.jpeg" type="image/x-icon">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="google-site-verification" content="Cn_GGElo-cbNkuj65G4fN_F-MR20NoOdTx_rlckOEPU" />
 
@@ -106,7 +107,7 @@ def build_head_html(title):
 	
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="Discrete Math for Computer Science">
+	<meta name="description" content="Introduction to Theory of Computation">
 	<meta name="author" content="Mia Minnes">
 
 	<title>""" + title + """</title>
@@ -126,7 +127,7 @@ def build_head_html(title):
 
 	<!-- icons for side menu -->
 	<link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' >
-	<link rel="shortcut icon" href="../resources/images/musicalchairs.png" type="image/x-icon">
+	<link rel="shortcut icon" href="../resources/images/wood-951875_960_720.jpeg" type="image/x-icon">
 </head>
 	"""
 	return headHtml
@@ -182,8 +183,8 @@ sidebarButtonsUnitData = json.loads(open("sidebar_buttons_unit.json").read())
 
 def secondaryUnitBoxes():
 	#content for the non-mobile secondary unit sidebar (will have all of the weeks)
-	secondaryUnitButtonsContent = """<div class="sidebar secondary"id="unit2" style="margin-left: 78px; width: 70px;">
-			<ul class="nav-list"> """
+	secondaryUnitButtonsContent = """<div class="sidebar secondary"id="unit2" style="margin-left: 78px; width: 70px">
+			<ul class="nav-list" style="margin-top: 100px"> """
 
 	for i in range(0,len(unitData)):
 		secondaryUnitButtonsContent += "<li>"
@@ -205,6 +206,7 @@ unitMobileButtonsContent = ""
 unitMobileButtonsContent += "<a href=\"assignments.html\"> Assignments </a>"
 unitMobileButtonsContent += "<a href=\"glossary.html\"> Glossary </a>"
 unitMobileButtonsContent += "<a href=\"supplemental_videos.html\"> Supplemental Videos </a>"
+unitMobileButtonsContent += "<a href=\"office_hours.html\"> Office Hours </a>"
 for i in range(0,len(unitData)):
 	unitMobileButtonsContent += """<a href= \"""" + 'unit'+str(i+1) + """.html\"">""" + unitData[i]['header'] + """</a>"""
 
@@ -222,8 +224,7 @@ for element in sidebarButtonsUnitData:
 	sidebarUnitButtonsContent += """<span class="links_name"> """ + name + """</span>"""
 	sidebarUnitButtonsContent += "</a>"
 	sidebarUnitButtonsContent += """<span class="tooltip"> """ + name + """</span>"""
-	sidebarUnitButtonsContent += "</li>"
-
+	sidebarUnitButtonsContent += "</li>\n"
 
 sidebars = {
 	'application': build_sidebar("index.html", websiteData['Global Class Name'], "overview_application.html", "Overview", "'bx bxs-shapes'", appButtonsContent,bool(False)),
@@ -253,7 +254,8 @@ def create_unit_boxes():
 	boxString += """ <button class="button coll" onclick="expandCollapseAll(0)">Expand All Boxes</button>
 				<button class="button coll" onclick="expandCollapseAll(1)">Collapse All Boxes</button><br><br>"""
 	
-	boxString += """<p>Compiled weeks file <a href="../output/lessons/complete-week.pdf" download>download</a></p>"""
+	# MIA Commented out for start of quarter
+	# boxString += """<p>Compiled weeks file <a href="../output/lessons/complete-week.pdf" download>download</a></p>"""
 
 	for i in range(len(unitData)):
 		unitNumber = i+1
@@ -290,7 +292,7 @@ def create_unit_boxes():
 		#pdfs
 		if('content' in unitData[i]):
 			for content in unitData[i]['content']:
-				print(content['name'])
+				# print(content['name'])
 				pdfjsID = content['name'].replace(" ", "-")
 				boxString += "<a href=\"unit""" +str(unitNumber)+ """.html#"""+ pdfjsID+"""\" >""" + content['name'] + """</a>&emsp;"""				
 		
@@ -463,7 +465,8 @@ def create_outcome_boxes():
 				#reset counter
 				childNum = 1 
 				for k in outcomeData[i]['Children'][j]['Children']:
-					boxString += """<dd> <a href=\""""+outcomeData[i]['Children'][j]['file']+"""?box=""" +str(childNum)+"""\" >""" + k + """</a> </dd>\n"""
+					kdesc = outcomeData[i]['Children'][j]['Children'][k]['Description']
+					boxString += """<dd> <a href=\""""+outcomeData[i]['Children'][j]['file']+"""?box=""" +str(childNum)+"""\" >""" + kdesc + """</a> </dd>\n"""
 					childNum+=1
 				
 				boxString += "</dl>"
@@ -529,7 +532,7 @@ def create_assignment():
 
 			html="../output/assignments/"+element['name']+".html"
 		else:
-			pdf="../output/assignments/"+element['name']+".pdf"
+			pdf="../files/"+element['name']+".pdf"
 			
 		#heading and collapsible card stuff
 		cardID = element['name'].replace(" ", "").lower()
@@ -566,26 +569,46 @@ def create_assignment():
 
         	#.html
 			templateString += """ <a tabindex = "2" style= "display: inline-block;" class="button HTML" aria-label="Open HTML file of Document in New Tab" 
-			href= """ + html + """ target="HTML">Raw HTML</a>"""
+			href= """ + html + """ target="HTML">Raw HTML</a><br>"""
         
 		#id of pdf.js element formatting
 		pdfjsID = element['name'].replace(" ", "-")
     	
 		#Solutions on/off buttons 
 		if('solutionsFile' in element):
+			templateString += """ <label>Sample solutions<input type="checkbox" id="toggle-""" + str(collapseVar) + """">
+				<span class="slider round"></span>
+				<script>
+					annotated""" + str(collapseVar) + """ = false;
+					document.getElementById("toggle-""" + str(collapseVar) + """").onclick = function() {
+						if(annotated""" + str(collapseVar) + """  == false) {
+							console.log("false to true");
+							annotated""" + str(collapseVar) + """  = true;
+							annotations(true, \""""+pdf+ """\",\"../files/"""+element['solutionsFile']+"""\", \"""" + pdfjsID + """\")
+						}
+						else {
+							console.log("true to false");
+							annotated""" + str(collapseVar) + """  = false;
+							annotations(false, \""""+pdf+ """\",\"../files/"""+element['solutionsFile']+"""\", \"""" + pdfjsID + """\")
+						}
+					}
+
+					
+				</script></label>
+			"""
         	
 			
-			templateString += """ <a tabindex = "2" class="button on" aria-label="Solutions On" id="solutionsOnButton"""+str(collapseVar)+ """/" href="javascript:void(0)" >Solutions On</a>
-			<a tabindex = "2" class="button off" aria-label="Solutions Off" id="solutionsOffButton"""+str(collapseVar)+ """/" href="javascript:void(0)" >Solutions Off</a> """
+			# templateString += """ <a tabindex = "2" class="button on" aria-label="Solutions On" id="solutionsOnButton"""+str(collapseVar)+ """/" href="javascript:void(0)" >Solutions On</a>
+			# <a tabindex = "2" class="button off" aria-label="Solutions Off" id="solutionsOffButton"""+str(collapseVar)+ """/" href="javascript:void(0)" >Solutions Off</a> """
 
-       		#solutions on
-			templateString += """ <script> document.getElementById("solutionsOnButton"""+str(collapseVar)+ """/").onclick = function() {annotations(1,
-			\""""+pdf+ """\",\"../files/"""+element['solutionsFile']+"""\", \""""+pdfjsID+ """\")};"""
+       		# #solutions on
+			# templateString += """ <script> document.getElementById("solutionsOnButton"""+str(collapseVar)+ """/").onclick = function() {annotations(1,
+			# \""""+pdf+ """\",\"../files/"""+element['solutionsFile']+"""\", \""""+pdfjsID+ """\")};"""
             
-        	#solutions off
-			templateString +="""document.getElementById("solutionsOffButton"""+str(collapseVar)+ """/").onclick = function() {annotations(0,
-			\""""+pdf+ """\",\"../files/"""+element['solutionsFile']+"""\", \""""+pdfjsID+ """\")};
-			</script>"""
+        	# #solutions off
+			# templateString +="""document.getElementById("solutionsOffButton"""+str(collapseVar)+ """/").onclick = function() {annotations(0,
+			# \""""+pdf+ """\",\"../files/"""+element['solutionsFile']+"""\", \""""+pdfjsID+ """\")};
+			# </script>"""
             
     	#pdf.js embed 
 		templateString += """ <br> <iframe class="PDFjs" id=\""""+ pdfjsID +"""\" src="web/viewer.html?file=../"""+ pdf+ """" 
@@ -740,6 +763,28 @@ def substitute_template(input, output):
     # Close files
 	templateOpener.close()
 
+def create_office_hours():
+	officehours = websiteData['Office Hours']
+	return officehours
+
+def create_full_definition():
+	full_definition = websiteData['Compiled Activity Snippets']
+	fullDefinition = ""
+	
+	if(full_definition == "True"):
+		fullDefinition = """<p>Compiled defintions file <a href="../output/activity-snippets/full-definition.pdf" download>download</a></p>"""
+	
+	return fullDefinition
+
+
+def create_compiled_assignments():
+	compiled = websiteData['Compiled Assignments']
+	text = ""
+	
+	if(compiled == "True"):
+		text = """<p>Compiled assignments file <a href="../output/assignments/assignments-compiled.pdf" download>download</a></p>"""
+
+	return text
 def write_if_different(filename, contents):
     try:
         old_contents = open(filename).read()
@@ -769,13 +814,16 @@ def create_site_variables():
 		'unitBoxes': create_unit_boxes(),
 		'outcomeBoxes': create_outcome_boxes(),
 		'applicationBoxes': create_application_boxes(),
+		'fullDefinition': create_full_definition(),
+		'compiledAssignments': create_compiled_assignments(),
 
 		'copyrightFooter': create_copyright(),
 		'feedbackForm': create_feedback(),
 		'mainTitle': create_title(),
 		'courseTitle': create_course_offering_title(),
 		'Term': create_term(),
-		'collapsibleMenu': create_assignment()
+		'collapsibleMenu': create_assignment(),
+		'officehourslink': create_office_hours()
 	}
 
 site_variables = create_site_variables()

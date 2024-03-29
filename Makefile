@@ -31,6 +31,7 @@ generated/last-index.txt: *.json *.py notes/lessons/*.tex notes/assignments/*.te
 	mkdir -p generated/notes/activity-snippets-flat
 	python3 weekly_compile_app.py
 	python3 weekly_compile_outcome.py
+	python3 assignments_compiled.py
 	touch generated/last-index.txt
 
 
@@ -108,8 +109,8 @@ generated/notes/%: notes/% ./notes/*/*
 	mkdir -p $@
 	cp -R $</ $@
 
-# # Directory notes/activity-snippets contains tex files for outcomes and outcomes 
-# generated-notes-activity-snippets: $(patsubst notes/activity-snippets/%,generated/notes/activity-snippets/%,$(wildcard notes/activity-snippets/*))
+# Directory notes/activity-snippets contains tex files for outcomes and outcomes 
+ generated-notes-activity-snippets: $(patsubst notes/activity-snippets/%,generated/notes/activity-snippets/%,$(wildcard notes/activity-snippets/*))
 
 # generated/notes/activity-snippets/%: notes/activity-snippets/%
 # 	mkdir -p generated/notes/activity-snippets
@@ -133,7 +134,7 @@ generated/website/%: custom-html/%
 # 	mkdir -p generated/website/css
 # 	cp $< $@
 
-# Building dynamic html pages based on unit template, outcome (TODO: rename as outcome) template
+# Building dynamic html pages based on unit template, outcome template
 # application template, and overview pages. These dynamic html pages are created
 # directly in the generated directory
 dynamic-pages: 
