@@ -34,7 +34,6 @@ def zip_file(filename, path):
         return ""
     
     
-
     #image list with image file names such as "image.png"
     imageList = [] 
 
@@ -47,9 +46,10 @@ def zip_file(filename, path):
     #to the zip file
     for line in texString:
         if ("\includegraphics" in line):
-            replaced = line.replace("../","").replace("resources/images/","")
+            # print(line)
+            replaced = line.replace("../","").replace("resources/machines/","")
             #DEBUG
-            #print(replaced)
+            # print(replaced)
             newTexString += replaced 
             
             #include graphics in regex 
@@ -78,6 +78,7 @@ def zip_file(filename, path):
 
     #set(imageList) will remove any duplicates of the same image file name 
     imageList = list(set(imageList))
+    # print(imageFile)
 
     #DEBUG
     #nlines=texString.count('\n')
@@ -88,6 +89,7 @@ def zip_file(filename, path):
          print(i)
 
     if(len(imageList)!=0):
+        # print(newPath)
         zipObj.write(newPath,basename(newPath))
         for element in imageList:
             zipObj.write(element, basename(element)) 
