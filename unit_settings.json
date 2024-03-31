@@ -45,7 +45,7 @@
         "Due Dates": [
             {
                 "name": "hw1-definitions-and-notation-CSE20S24",
-                "due": "4/8/24 at 5pm (no penalty late submission until 8am next morning)"
+                "due": "4/9/24 at 5pm (no penalty late submission until 8am next morning)"
             },
             {
                 "name": "Review Quiz",
@@ -72,7 +72,7 @@
         "Due Dates": [
             {
                 "name": "hw2-numbers-CSE20S24",
-                "due": "4/15/24 at 5pm (no penalty late submission until 8am next morning)"
+                "due": "4/16/24 at 5pm (no penalty late submission until 8am next morning)"
             },
             {
                 "name": "Review Quiz",
@@ -100,7 +100,7 @@
         "Due Dates": [
             {
                 "name": "hw3-circuits-and-logic-CSE20S24",
-                "due": "4/22/24 at 5pm (no penalty late submission until 8am next morning)"
+                "due": "4/23/24 at 5pm (no penalty late submission until 8am next morning)"
             },
             {
                 "name": "Review Quiz",
@@ -175,7 +175,7 @@
         "Due Dates": [
             {
                 "name": "project-CSE20S24",
-                "due": "5/8/24 at 5pm (no penalty late submission until 8am next day)"
+                "due": "5/7/24 at 5pm (no penalty late submission until 8am next day)"
             },
             {
                 "name": "Review Quiz",
@@ -199,7 +199,7 @@
         "Due Dates": [
             {
                 "name": "hw4-proofs-and-sets-CSE20S24",
-                "due": "5/13/24 at 5pm (no penalty late submission until 8am next morning)"
+                "due": "5/14/24 at 5pm (no penalty late submission until 8am next morning)"
             },
             {
                 "name": "Review Quiz",
@@ -235,7 +235,7 @@
         "Due Dates": [
             {
                 "name": "hw5-proofs-and-induction-CSE20S24",
-                "due": "5/20/24 at 5pm (no penalty late submission until 8am next morning)"
+                "due": "5/21/24 at 5pm (no penalty late submission until 8am next morning)"
             },
             {
                 "name": "Review Quiz",
@@ -290,7 +290,7 @@
         "Due Dates": [
             {
                 "name": "hw6-proof-cardinality-relations-CSE20S24",
-                "due": "6/3/24 at 5pm (no penalty late submission until 8am next morning)"
+                "due": "6/4/24 at 5pm (no penalty late submission until 8am next morning)"
             }
         ]
     },
