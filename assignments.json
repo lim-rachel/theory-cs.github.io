@@ -2,7 +2,8 @@
    {
       "name": "hw1-definitions-and-notation-CSE20S24",
       "addExtensions": true,
-      "Information": "This is a group optional assignment"
+      "Information": "This is a group optional assignment",
+      "solutionsFile": "hw1-sample-solutions-definitions-and-notation-CSE20S24.pdf"
    },
    {
       "name": "hw2-numbers-CSE20S24",
