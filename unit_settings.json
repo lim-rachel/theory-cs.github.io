@@ -35,7 +35,7 @@
         "header": "Week 2",
         "outcomes": "Number representations",
         "CalendarInfo": " Dates: 4/8/24-4/12/24",
-        "ExpandInCalendar": true,
+        "ExpandInCalendar": false,
         "content": [
             {
                 "name": "Notes",
@@ -58,7 +58,7 @@
         "header": "Week 3",
         "outcomes": "Circuits and Propositional Logic",
         "CalendarInfo": " Dates: 4/15/24-4/19/24",
-        "ExpandInCalendar": false,
+        "ExpandInCalendar": true,
         "content": [
             {
                 "name": "Notes",
