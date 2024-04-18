@@ -85,8 +85,8 @@
     {
         "header": "Week 4",
         "outcomes": "Predicate Logic",
-        "CalendarInfo": " Dates: 4/22/24 - 4/26/24",
-        "ExpandInCalendar": false,
+        "CalendarInfo": " Dates: 4/22/24 - 4/26/24. Monday's CSE 20 class will be on Zoom  https://ucsd.zoom.us/j/98743879344. Wednesday and Friday's classes will be back in-person in WLH 2001.",
+        "ExpandInCalendar": true,
         "content": [
             {
                 "name": "Notes",
