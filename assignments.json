@@ -8,7 +8,8 @@
    {
       "name": "hw2-numbers-CSE20S24",
       "addExtensions": true,
-      "Information": "This is a group optional assignment"
+      "Information": "This is a group optional assignment",
+      "solutionsFile": "hw2-solutions-CSE20S24.pdf"
    },
    {
       "name": "hw3-circuits-and-logic-CSE20S24",
