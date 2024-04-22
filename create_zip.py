@@ -100,4 +100,4 @@ def zip_file(filename, path):
         return "../notes/"+path+"/"+filename+".tex"
 
 #DEBUG test
-zip_file("hw5CSE105Sp22", "assignments-flat")
+#zip_file("hw5CSE105Sp22", "assignments-flat")

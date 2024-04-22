@@ -116,10 +116,9 @@ for filename in os.listdir(weeklyDirectory):
             # Split small outcomes with the delimiter ", " into a list
             li = list(particularLine.split(", "))
             for element in li:
-                # print("element is: " + element + "\n")
                 # lowercase them and replace whitespace with dashes (to make them uniform)
                 test = element.replace(" ", "-").lower()
-
+                
                 #debug
                 #print(test)
 
@@ -134,7 +133,6 @@ for filename in os.listdir(weeklyDirectory):
                     snippetWeek = [snippetsFile, weekNumber]
 
                     # add that tex filename to the dictionary
-                    # print("test is: " + test)
                     lowLevelsDict[test].append(snippetWeek)
 
                     #debug

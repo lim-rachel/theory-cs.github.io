@@ -1,17 +1,17 @@
 {
-    "Regular Languages":{
-        "Icon": "Reg"
+    "Numbers":{
+        "Icon": "NM"
     },
-    "Context-free Languages":{ 
-        "Icon": "CFL"
+    "Recommendation Systems":{ 
+        "Icon": "RS"
     },
-    "Decidable Languages":{
-        "Icon": "Dec"
+    "Computers":{
+        "Icon": "CP"
     },
-    "Undecidable Languages":{
-        "Icon": "UN"
+    "Codes and Information":{
+        "Icon": "CI"
     },
-    "Complexity":{
-        "Icon":"CPX"
+    "Bioinformatics":{
+        "Icon":"BI"
     }
 }

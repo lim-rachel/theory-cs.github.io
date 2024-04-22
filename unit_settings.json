@@ -1,341 +1,119 @@
 [
     {
         "header": "Week 1",
-        "outcomes": "Languages, expressions, and automata",
-        "CalendarInfo": "Dates: 1/8/24 - 1/14/24<br> Welcome! Please take our <a href=\"https://canvas.ucsd.edu/courses/53839/quizzes/157507\" target=\"_blank\">pre-class survey</a> on Canvas. See you Monday 2pm in Warren Lecture Hall 2001. Notes for class are linked below: we recommend attending class in person each day (if you can). We'll be working directly on quiz and homework questions in many classes to help you get started with problem solving. Discussion sections will include a review of the lecture material for the week and example problems. They are scheduled for Fridays at 4pm in WLH 2001. Tests will be taken in discussion section twice during the quarter.",
+        "outcomes": "Introduction and data types",
+        "CalendarInfo": " Dates: 4/1/24 - 4/7/24<br> Welcome! Please take our pre-class survey on <a href=\"https://canvas.ucsd.edu/\" target=\"_blank\">Canvas</a>. See you Monday 1pm in Warren Lecture Hall 2001. Notes for class are linked below: we recommend attending class in person each day (if you can). We'll be working directly on quiz and homework questions in many classes to help you get started with problem solving. Discussion sections will include a review of the lecture material for the week and example problems. They are scheduled for Wednesdays at 5pm in YORK 2722. Tests will be taken in class twice during the quarter.",
         "ExpandInCalendar": false,
         "content": [
             {
                 "name": "Notes",
                 "source": "Week1.tex"
-            },
+            }, 
             {
-                "name": "Discussion notes",
-                "source": "cse105w24_week1discussion.pdf"
-            },
-            {
-                "name": "Review Quizzes",
-                "source": "Week1RQ.pdf"
+                "name": "Lecture and Discussion podcast",
+                "source": "<p>See <a href=\"https://podcast.ucsd.edu/\">videos on podcast.ucsd.edu</a></p>"
             },
             {
                 "name": "Lecture Hall",
                 "source": "<br><iframe height=\"600px\" width=\"100%\" src=\"https://map.concept3d.com/?id=1005#!m/553665\" frameborder=\"0\"></iframe>"
             },
             {
-                "name": "(Video) Overview",
-                "source": "https://youtu.be/w7JsXayXzqY"
-            },
-            {
-                "name": "(Video) Vocabulary",
-                "source": "https://youtu.be/z6n5j5VhwH4"
-            },
-            {
-                "name": "(Video) Regular expressions introduction",
-                "source": "https://youtu.be/xWFXpqQWEjk"
-            },
-            {
-                "name": "(Video) Regular expressions",
-                "source": "https://youtu.be/P18LN85i1qE"
-            },
-            {
-                "name": "(Video) Regular expressions example",
-                "source": "https://youtu.be/lggfMKyC7B8"
-            },
-            {
-                "name": "(Video) Regular expressions definition recap",
-                "source": "https://youtu.be/EKlAhoApg3k"
-            },
-            {
-                "name": "(Video) Regular expressions more exmaples",
-                "source": "https://youtu.be/kdtISDO2pf4"
-            },
-            {
-                "name": "(Video) Regular expressions and grep",
-                "source": "https://youtu.be/PXHc2SwHRIk"
-            },
-            {
-                "name": "(Video) DFA intro",
-                "source": "https://youtu.be/PI6VPw1-OUI"
-            },
-            {
-                "name": "(Video) DFA first examples",
-                "source": "https://youtu.be/u5idyPDUEpo"
-            },
-            {
-                "name": "(Video) DFA first examples solution",
-                "source": "https://youtu.be/yINehrrd4qk"
-            },
-            {
-                "name": "(Video) JFLAP demo",
-                "source": "https://youtu.be/CBa5i1CevvA"
+                "name": "(Video) Course Intro",
+                "source": "https://www.youtube.com/embed/2KbOaCLS-cQ"
             }
         ],
 
         "Due Dates": [
             {
-                "name": "Daily Review Quiz",
+                "name": "Review Quiz",
                 "link": "https://gradescope.com",
-                "due": "1/12/24 at 5pm (no penalty late submission until Sunday)"
+                "due": "4/5/24 at 5pm"
             }
         ]
-    },
+    }, 
     {
         "header": "Week 2",
-        "outcomes": "Regular languages and nondeterminism",
-        "CalendarInfo": " Dates: 1/15/24 - 1/21/24. No class on Monday (in observance of Martin Luther King, Jr. Day).",
+        "outcomes": "Number representations",
+        "CalendarInfo": " Dates: 4/8/24-4/12/24",
         "ExpandInCalendar": false,
         "content": [
             {
                 "name": "Notes",
                 "source": "Week2.tex"
-            },
-            {
-                "name": "Discussion notes",
-                "source": "Week2-discussion.pdf"
-            },
-            {
-                "name": "Review Quizzes",
-                "source": "Week2RQ.pdf"
-            },
-            {
-                "name": "(Video) DFA Formal Definition",
-                "source": "https://youtu.be/GwY2en9E4VI"
-            },
-            {
-                "name": "(Video) DFA Analysis",
-                "source": "https://youtu.be/dEyKH7nTkkA"
-            },
-            {
-                "name": "(Video) DFA Design Example 1",
-                "source": "https://youtu.be/EdCJHmpbOqI"
-            },
-            {
-                "name": "(Video) DFA Design Example 2",
-                "source": "https://youtu.be/O5SnUDgb5qA"
-            },
-            {
-                "name": "(Video) DFA Design Example 3",
-                "source": "https://youtu.be/ntjnaRBIwk4"
-            },
-            {
-                "name": "(Video) Regular Languages",
-                "source": "https://youtu.be/6Avl7bJ17Z0"
-            },
-            {
-                "name": "(Video) Finite Languages are Regular",
-                "source": "https://youtu.be/qE5ko48SbAo"
-            },
-            {
-                "name": "(Video) Regular Languages and Complementation",
-                "source": "https://youtu.be/yuzWlJgni-M"
-            },
-            {
-                "name": "(Video) Motivation for Closure Proofs",
-                "source": "https://youtu.be/w9CeBiG0f8E"
-            },
-            {
-                "name": "(Video) Regular Languages and Union",
-                "source": "https://youtu.be/r2A5j1Xj3FU"
-            },
-            {
-                "name": "(Video) DFA Design Example: Intersection",
-                "source": "https://youtu.be/ExhvONf_f_w"
-            },
-            {
-                "name": "(Video) Regular Languages and Intersection",
-                "source": "https://youtu.be/dDsfq-_DF5Y"
-            },
-            {
-                "name": "(Video) Iterated Transition Function",
-                "source": "https://youtu.be/EDV-fmSXHxY"
-            },
-            {
-                "name": "(Video) NFA Motivation and Definition",
-                "source": "https://youtu.be/_VRh_JpOfxg"
-            },
-            {
-                "name": "(Video) NFA Overview and Example",
-                "source": "https://youtu.be/1FiuofzjlC0"
             }
-            
         ],
-
         "Due Dates": [
             {
-                "name": "hw1CSE105W24",
-                "due": "1/18/24 at 5pm (no penalty late submission until 8am next morning)"
+                "name": "hw1-definitions-and-notation-CSE20S24",
+                "due": "4/9/24 at 5pm (no penalty late submission until 8am next morning)"
             },
             {
-                "name": "Daily Review Quiz",
+                "name": "Review Quiz",
                 "link": "https://gradescope.com",
-                "due": "1/19/24 at 5pm (no penalty late submission until Sunday)"
+                "due": "4/12/24 at 5pm"
             }
         ]
-    },
+    }, 
     {
         "header": "Week 3",
-        "outcomes": "Automata constructions and nonregular languages",
-        "CalendarInfo": " Dates: 1/22/24 - 1/28/24",
-        "ExpandInCalendar": false,
+        "outcomes": "Circuits and Propositional Logic",
+        "CalendarInfo": " Dates: 4/15/24-4/19/24",
+        "ExpandInCalendar": true,
         "content": [
             {
                 "name": "Notes",
                 "source": "Week3.tex"
             },
             {
-                "name": "Discussion Notes",
-                "source": "cse105w24_discussion3.pdf"
-            },
-            {
-                "name": "Review Quizzes",
-                "source": "Week3RQ.pdf"
-            }, 
-            {
-                "name": "(Video) NFA More Examples",
-                "source": "https://youtu.be/zqG_9oue9QU"
-            },
-            {
-                "name": "(Video) NFA Formal Definitions",
-                "source": "https://youtu.be/cdiGJSF8B0g"
-            },
-            {
-                "name": "(Video) Regular Languages Union Again",
-                "source": "https://youtu.be/_tUD0uygvnE"
-            },
-            {
-                "name": "(Video) Regular Languages Concatenation",
-                "source": "https://youtu.be/yCwE70DoXMc"
-            },
-            {
-                "name": "(Video) Regular Languages Kleene Star",
-                "source": "https://youtu.be/gSfDNaD2Za0"
-            },
-            {
-                "name": "(Video) NFA to DFA",
-                "source": "https://youtu.be/DQj5Jq3eJx8"
-            },
-            {
-                "name": "(Video) Extra Example",
-                "source": "https://youtu.be/wbbOinuDHGU"
-            },
-            {
-                "name": "(Video) DFA to Regular Expression",
-                "source": "https://youtu.be/vR_FH94hCu4"
-            },
-            {
-                "name": "(Video) Regular Expression to NFA",
-                "source": "https://youtu.be/Uu86Sx5GE9M"
-            },
-            {
-                "name": "(Video) Nonregular Sets Introduction",
-                "source": "https://youtu.be/XX0ftxx2-QE"
-            },
-            {
-                "name": "(Video) Nonregular Sets Strategies",
-                "source": "https://youtu.be/mXjZ0YnYPeA"
-            },
-            {
-                "name": "(Video) Pumping Lemma",
-                "source": "https://youtu.be/TjbLnKqpG3w"
-            },
-            {
-                "name": "(Video) Pumping Lemma and Finite Sets",
-                "source": "https://youtu.be/1F502GBzRq8"
+                "name": "(Video) CNF and DNF overview",
+                "source": "https://www.youtube.com/embed/I2KLt_lhzDg"
             }
         ],
-
         "Due Dates": [
             {
-                "name": "Daily Review Quiz",
+                "name": "hw2-numbers-CSE20S24",
+                "due": "4/16/24 at 5pm (no penalty late submission until 8am next morning)"
+            },
+            {
+                "name": "Review Quiz",
                 "link": "https://gradescope.com",
-                "due": "1/26/24 at 5pm (no penalty late submission until Sunday)"
+                "due": "4/19/24 at 5pm"
             }
         ]
     },
+
     {
         "header": "Week 4",
-        "outcomes": "Pumping Lemma and Pushdown Automata",
-        "CalendarInfo": " Dates: 1/29/24 - 2/4/24",
-        "ExpandInCalendar": false,
+        "outcomes": "Predicate Logic",
+        "CalendarInfo": " Dates: 4/22/24 - 4/26/24. Monday's CSE 20 class will be on Zoom  https://ucsd.zoom.us/j/98743879344. Wednesday and Friday's classes will be back in-person in WLH 2001.",
+        "ExpandInCalendar": true,
         "content": [
             {
                 "name": "Notes",
                 "source": "Week4.tex"
             },
             {
-                "name": "Discussion notes",
-                "source": "Week4-discussion.pdf"
-            },
-            {
-                "name": "Review Quizzes",
-                "source": "Week4RQ.pdf"
-            }, 
-            {
-                "name": "(Video) Pumping Lemma Applications",
-                "source": "https://youtu.be/e69l6fAmOmI"
-            },
-            {
-                "name": "(Video) Nonregular set example 1",
-                "source": "https://youtu.be/VdF5Si326f4"
-            },
-            {
-                "name": "(Video) Nonregular set example 1 proof",
-                "source": "https://youtu.be/yuT-Uj8firk"
-            },
-            {
-                "name": "(Video) Nonregular set example 2 with pumping lemma",
-                "source": "https://youtu.be/cELt7w4BIYY"
-            },
-            {
-                "name": "(Video) Nonregular sets summary",
-                "source": "https://youtu.be/u7_jpg4JDJI"
-            },
-            {
-                "name": "(Video) PDA introduction",
-                "source": "https://youtu.be/Y3nPeTXQ-kw"
-            },
-            {
-                "name": "(Video) PDA definition",
-                "source": "https://youtu.be/2SePbTqC9Ug"
-            },
-            {
-                "name": "(Video) PDA stack implementation",
-                "source": "https://youtu.be/xx3esuK_A2A"
-            },
-            {
-                "name": "(Video) PDA formal definition",
-                "source": "https://youtu.be/uGAsTe1_2jY"
-            },
-            {
-                "name": "(Video) PDA example trace",
-                "source": "https://youtu.be/Y1AvdN7svOQ"
-            },
-            {
-                "name": "(Video) PDA design example",
-                "source": "https://youtu.be/Vms4jg4RRjA"
-            },
-            {
-                "name": "(Video) PDA arrow labels",
-                "source": "https://youtu.be/nqbwhhWqWHo"
+                "name": "(Video) Example translation to predicate logic",
+                "source": "https://youtu.be/cw2nbPM0aX4"
             }
         ],
-
         "Due Dates": [
             {
-                "name": "hw2CSE105W24",
-                "due": "2/1/24 at 5pm (no penalty late submission until 8am next day)"
+                "name": "hw3-circuits-and-logic-CSE20S24",
+                "due": "4/23/24 at 5pm (no penalty late submission until 8am next morning)"
             },
             {
-                "name": "Daily Review Quiz",
+                "name": "Review Quiz",
                 "link": "https://gradescope.com",
-                "due": "2/2/24 at 5pm (no penalty late submission until Sunday)"
+                "due": "4/26/24 at 5pm"
             }
         ]
     },
+
     {
         "header": "Week 5",
-        "outcomes": "Context-free grammars and context-free languages",
-        "CalendarInfo": " Dates: 2/5/24 - 2/11/24. Test 1 in discussion section this week, Friday Feb 9 in discussion section 4pm-4:50pm WLH 2001.  The test covers material in Weeks 1 through 4 and Monday of Week 5. In particular, you should make sure you can:<ul> <li>Distinguish between alphabet, language, sets, and strings</li><li>Translate a decision problem to a set of strings coding the problem</li><li>Use regular expressions and relate them to languages and automata</li><li>Write and debug regular expressions using correct syntax</li><li>Determine if a given string is in the language described by a regular expression</li><li>Use precise notation to formally define the state diagram of DFA, NFA and use clear English to describe computations of DFA, NFA informally.</li><li>State the formal definition of (deterministic) finite automata</li><li>Trace the computation of a finite automaton on a given string using its state diagram</li><li>Translate between a state diagram and a formal definition</li><li>Determine if a given string is in the language described by a finite automaton</li><li>Design and analyze an automaton that recognizes a given language</li><li>Specify a general construction for DFA based on parameters</li><li>Design and analyze general constructions for DFA</li><li>Motivate the use of nondeterminism</li><li>Trace the computation(s) of a nondeterministic finite automaton</li><li>Determine the language recognized by a given NFA</li><li>Design and analyze general constructions for NFA</li><li>Choose between multiple models to prove that a language is regular</li><li>Explain nondeterminism and describe tools for simulating it with deterministic computation.</li><li>Find equivalent DFA for a given NFA</li><li>Convert between regular expressions and automata</li><li>Classify the computational complexity of a set of strings by determining whether it is regular</li><li>Explain the limits of the class of regular languages</li><li>Identify some nonregular sets</li><li>Use the pumping lemma to prove that a given language is not regular.</li><li>Justify why the Pumping Lemma is true</li><li>Apply the Pumping Lemma in proofs of nonregularity</li><li>Use precise notation to formally define the state diagram of PDA and use clear English to describe computations of PDA informally.</li><li>Define push-down automata informally and formally</li><li>Trace the computation of a push-down automaton</li><li>Determine the language recognized by a given PDA</li><li>Design push-down automata to recognize specific languages</li><li>Determine whether a language is recognizable by a (D or N) FA and/or a PDA</li><li>Use context-free grammars and relate them to languages and pushdown automata.</li><li>Identify the components of a formal definition of a context-free grammar (CFG)</li><li>Derive strings in the language of a given CFG</li><li>Determine the language of a given CFG</li><li>Design a CFG generating a given language</li></ul><p>To study for the exam, we recommend reviewing class notes (e.g. annotations linked on the class website, podcast, supplementary video from the class website), reviewing homework (and its posted sample solutions), and in particular *working examples* (extra examples in lecture notes, textbook examples listed in hw, review quizzes -- PDFs now available on the class website, discussion examples) and getting feedback (office hours and Piazza).</p>",
+        "outcomes": "Proof Strategies",
+        "CalendarInfo": " Dates: 4/29/24 - 5/3/24.  Test 1 in class section this week, Friday May 3 1pm-1:50pm WLH 2001.  The test covers material in Weeks 1 through 4 and Monday of Week 5. To study for the exam, we recommend reviewing class notes (e.g. annotations linked on the class website, podcast, supplementary video from the class website), reviewing homework (and its posted sample solutions), and in particular *working examples* (extra examples in lecture notes, textbook examples listed in homework, review quizzes, discussion examples) and getting feedback (office hours and Piazza)",
         "ExpandInCalendar": false,
         "content": [
             {
@@ -343,83 +121,38 @@
                 "source": "Week5.tex"
             },
             {
-                "name": "Review Quizzes",
-                "source": "Week5RQ.pdf"
-            }, 
-            {
-                "name": "(Video) PDA Design and reverse engingeering",
-                "source": "https://youtu.be/b-dr_GndeBg"
+                "name": "(Video) Set equality",
+                "source": "https://youtu.be/DMMEIHv7ftQ"
             },
             {
-                "name": "(Video) PDA Example Nondeterminism",
-                "source": "https://youtu.be/ZRCeF2V6QhY"
+                "name": "(Video) Subset inclusion",
+                "source": "https://youtu.be/s0LTAbEjSsc"
             },
             {
-                "name": "(Video) PDA General Constructions",
-                "source": "https://youtu.be/82kuXoNnbvc"
+                "name": "(Video) Set operations: Definitions and Venn diagrams",
+                "source": "https://youtu.be/k0_kRwZ6WBA"
             },
             {
-                "name": "(Video) CFG introduction",
-                "source": "https://youtu.be/2jGLrG3cOIk"
+                "name": "(Video) Motivation for proofs about primes",
+                "source": "https://youtu.be/LARELuWHn6E"
             },
             {
-                "name": "(Video) CFG example1",
-                "source": "https://youtu.be/q6HHt6UcTVo"
-            },
-            {
-                "name": "(Video) CFG example2",
-                "source": "https://youtu.be/OAmPvuCgrIM"
-            },
-            {
-                "name": "(Video) CFG example3",
-                "source": "https://youtu.be/rBO_BJqcJAk"
-            },
-            {
-                "name": "(Video) CFG example4",
-                "source": "https://youtu.be/rfONHcP-DmA"
-            },
-            {
-                "name": "(Video) CFG Design example",
-                "source": "https://youtu.be/_r_NQpW3BhU"
-            },
-            {
-                "name": "(Video) CFG Design for nonregular language",
-                "source": "https://youtu.be/7Wd1qPZgRnM"
-            },
-            {
-                "name": "(Video) Context-free languages intro",
-                "source": "https://youtu.be/q-bEQWWyepw"
-            },
-            {
-                "name": "(Video) CFL applications",
-                "source": "https://youtu.be/QxyMc7YE4uI"
-            },
-            {
-                "name": "(Video) CFL closure",
-                "source": "https://youtu.be/jZ_XSmnk8q0"
-            },
-            {
-                "name": "(Video) Non-context-free languages",
-                "source": "https://youtu.be/d52BxsDMl9c"
+                "name": "(Video) Examples for proof strategies: Universal conditional statement",
+                "source": "https://youtu.be/zgUXEiPw9fw"
             }
         ],
 
         "Due Dates": [
             {
                 "name": "Test 1",
-                "due": "2/9/24 in discussion section"
-            },
-            {
-                "name": "Daily Review Quiz",
-                "link": "https://gradescope.com",
-                "due": "2/9/24 at 5pm (no penalty late submission until Sunday)"
+                "due": "5/3/24 in class"
             }
         ]
     },
     {
         "header": "Week 6",
-        "outcomes": "Turing machines, algorithms, and decidability",
-        "CalendarInfo": " Dates: 2/12/24 - 2/18/24",
+        "outcomes": "Proofs, Recursion, and Induction",
+        "CalendarInfo": " Dates: 5/6/24-5/10/24",
         "ExpandInCalendar": false,
         "content": [
             {
@@ -427,155 +160,59 @@
                 "source": "Week6.tex"
             },
             {
-                "name": "Review Quizzes",
-                "source": "Week6RQ.pdf"
-            }, 
-            {
-                "name": "(Video) Turing machine introduction",
-                "source": "https://youtu.be/rASd5i-Am7k"
+                "name": "(Video) Comparing induction strategies",
+                "source": "https://youtu.be/4xAhIngGwcU"
             },
             {
-                "name": "(Video) Turing machine definition",
-                "source": "https://youtu.be/pNdYPsb3qCI"
+                "name": "(Video) Mathematical induction strategy",
+                "source": "https://youtu.be/t26yTPA5-Os"
             },
             {
-                "name": "(Video) TM state diagram",
-                "source": "https://youtu.be/yxQ_tKk5lL8"
-            },
-            {
-                "name": "(Video) TM trace computation",
-                "source": "https://youtu.be/lnJeWygUIjU"
-            },
-            {
-                "name": "(Video) TM complicated example",
-                "source": "https://youtu.be/g51BMp5Th7M"
-            },
-            {
-                "name": "(Video) TM Intro Recap",
-                "source": "https://youtu.be/GuhFK1NLNxg"
-            },
-            {
-                "name": "(Video) TM Accept, Reject, Loop",
-                "source": "https://youtu.be/ZBBdSNihLB4"
-            },
-            {
-                "name": "(Video) TM Recognize vs Decide",
-                "source": "https://youtu.be/-R9Qbm-vHM0"
-            },
-            {
-                "name": "(Video) TM Implementation-level and formal definition Example 1",
-                "source": "https://youtu.be/q47wZ3Hdt2Y"
-            },
-            {
-                "name": "(Video) TM Implementation-level and formal definition Example 2",
-                "source": "https://youtu.be/TIfcmbfIhVE"
-            },
-            {
-                "name": "(Video) TM Implementation-level and formal definition Example 3",
-                "source": "https://youtu.be/FYy-vhW6_L4"
-            },
-            {
-                "name": "(Video) Recognizable and Decidable languages",
-                "source": "https://youtu.be/DIcw6qa4CAo"
-            },
-            {
-                "name": "(Video) Regular languages are decidable",
-                "source": "https://youtu.be/8LaBLS2pdi4"
-            },
-            {
-                "name": "(Video) High-level descriptions of TMs",
-                "source": "https://youtu.be/TOUTeqTL5Xw"
-            },
-            {
-                "name": "(Video) Closure of class of recognizable languages under union",
-                "source": "https://youtu.be/Wsbs3ujAaPw"
+                "name": "(Video) Mathematical induction example",
+                "source": "https://youtu.be/3VpOoSEVm3E"
             }
         ],
-
         "Due Dates": [
-           {
-                "name": "hw3CSE105W24",
-                "due": "2/15/24 at 5pm (no penalty late submission until 8am next day)"
-           },
-           {
-                "name": "Daily Review Quiz",
+            {
+                "name": "project-CSE20S24",
+                "due": "5/7/24 at 5pm (no penalty late submission until 8am next day)"
+            },
+            {
+                "name": "Review Quiz",
                 "link": "https://gradescope.com",
-                "due": "2/16/24 at 5pm (no penalty late submission until Sunday)"
+                "due": "5/10/24 at 5pm"
             }
         ]
     },
+
     {
         "header": "Week 7",
-        "outcomes": "Computational problems: decidable and undecidable",
-        "CalendarInfo": " Dates: 2/19/24 - 2/25/24. No class on Monday (in observance of Presidents Day).",
+        "outcomes": "More recursion and induction",
+        "CalendarInfo": " Dates: 5/13/24-5/17/24",
         "ExpandInCalendar": false,
         "content": [
             {
                 "name": "Notes",
                 "source": "Week7.tex"
-            },
-            {
-                "name": "Discussion notes",
-                "source": "Week7-discussion.pdf"
-            },
-            {
-                "name": "Review Quizzes",
-                "source": "Week7RQ.pdf"
-            }, 
-            {
-                "name": "(Video) Decidable computational problems",
-                "source": "https://youtu.be/VQU2rk_XGWI"
-            },
-            {
-                "name": "(Video) ADFA and EDFA and EQDFA",
-                "source": "https://youtu.be/km8ZlfCBa3g"
-            },
-            {
-                "name": "(Video) ADFA is decidable",
-                "source": "https://youtu.be/d93WoC9LgtY"
-            },
-            {
-                "name": "(Video) AREX and ANFA are decidable",
-                "source": "https://youtu.be/o4rIejvyMRo"
-            },
-            {
-                "name": "(Video) EDFA is decidable",
-                "source": "https://youtu.be/5uuzMZODfqc"
-            },
-            {
-                "name": "(Video) EQDFA is decidable",
-                "source": "https://youtu.be/QC0NZWdtBXY"
-            },
-            {
-                "name": "(Video) Decidability proofs recap",
-                "source": "https://youtu.be/jEldQE1OKr8"
-            },
-            {
-                "name": "(Video) Undecidability Counting Argument",
-                "source": "https://youtu.be/dsspqY2qvqA"
-            },
-            {
-                "name": "(Video) ATM recognizable",
-                "source": "https://youtu.be/-DFZ-NLC_BQ"
             }
         ],
-
         "Due Dates": [
             {
-                "name": "projectCSE105W24",
-                "due": "2/22/24 at 5pm (no penalty late submission until 8am next day)"
+                "name": "hw4-proofs-and-sets-CSE20S24",
+                "due": "5/14/24 at 5pm (no penalty late submission until 8am next morning)"
             },
             {
-                "name": "Daily Review Quiz",
+                "name": "Review Quiz",
                 "link": "https://gradescope.com",
-                "due": "2/23/24 at 5pm (no penalty late submission until Sunday)"
+                "due": "5/17/24 at 5pm"
             }
         ]
     },
+    
     {
         "header": "Week 8",
-        "outcomes": "How undecidable: mapping reductions and the halting problem",
-        "CalendarInfo": " Dates: 2/26/24 - 3/3/24",
+        "outcomes": "Functions and Cardinality",
+        "CalendarInfo": " Dates: 5/20/24-5/24/24",
         "ExpandInCalendar": false,
         "content": [
             {
@@ -583,87 +220,35 @@
                 "source": "Week8.tex"
             },
             {
-                "name": "Discussion Notes",
-                "source": "cse105w24_week8discussion.pdf"
+                "name": "(Video) Functions for cardinality",
+                "source": "https://youtu.be/2-oZ8SnzNAQ"
             },
             {
-                "name": "Review Quizzes",
-                "source": "Week8RQ.pdf"
-            }, 
-            {
-                "name": "(Video) ATM undecidable via diagonalization",
-                "source": "https://youtu.be/2OR5wIIy5w8"
+                "name": "(Video) All RNA strands and all Linked Lists: countably infinite",
+                "source": "https://youtu.be/3kT7IFOLqpc"
             },
             {
-                "name": "(Video) ATM recap",
-                "source": "https://youtu.be/71_EJxEuVVU"
-            },
-            {
-                "name": "(Video) Unrecognizable languages",
-                "source": "https://youtu.be/wLrz6jY0mqs"
-            },
-            {
-                "name": "(Video) Complement of ATM",
-                "source": "https://youtu.be/1rw8bMyu6F4"   
-            },
-            {
-                "name": "(Video) Undecidability proof strategies",
-                "source": "https://youtu.be/_jTeY9Evpgs"
-            },
-            {
-                "name": "(Video) Reductions Intro",
-                "source": "https://youtu.be/pFOhhAj2aZk"
-            },
-            {
-                "name": "(Video) Mapping Reduction Definition",
-                "source": "https://youtu.be/CIQ7rn4lEyg"
-            },
-            {
-                "name": "(Video) Computable Function Definition",
-                "source": "https://youtu.be/qzu0y3nCtcs"
-            },
-            {
-                "name": "(Video) Computable Function First Examples",
-                "source": "https://youtu.be/uSDs_Yyqtmo"
-            },
-            {
-                "name": "(Video) Computable Function Complicated Example",
-                "source": "https://youtu.be/sCz3mqUVdXA"
-            },
-            {
-                "name": "(Video) Mapping Reduction Example 1",
-                "source": "https://youtu.be/HMzxXq036Rw"
-            },
-            {
-                "name": "(Video) Mapping Reduction Example 2",
-                "source": "https://youtu.be/2-Z0LeGiTEk"
-            },
-            {
-                "name": "(Video) Mapping Reduction Example 3",
-                "source": "https://youtu.be/I1sFNclikgk"
-            },
-            {
-                "name": "(Video) Halting Problem",
-                "source": "https://youtu.be/9UPuU2MFSyE"
+                "name": "(Video) Diagonalization",
+                "source": "https://youtu.be/hfiPaOadWOw"
             }
         ],
-
         "Due Dates": [
             {
-                "name": "hw4CSE105W24",
-                "due": "2/29/24 at 5pm (no penalty late submission until 8am next day)"
+                "name": "hw5-proofs-and-induction-CSE20S24",
+                "due": "5/21/24 at 5pm (no penalty late submission until 8am next morning)"
             },
             {
-                "name": "Daily Review Quiz",
+                "name": "Review Quiz",
                 "link": "https://gradescope.com",
-                "due": "3/1/24 at 5pm (no penalty late submission until Sunday)"
+                "due": "5/24/24 at 5pm"
             }
         ]
     },
+
     {
         "header": "Week 9",
-        "outcomes": "Mapping reductions and the Church-Turing thesis.",
-        "CalendarInfo": " Dates: 3/4/24 - 3/10/24. Test 2 in discussion section this week.",
+        "outcomes": "Relations and Modular Arithmetic",
+        "CalendarInfo": " Dates: 5/27/24-5/31/24. No class on Monday (in observance of Memorial Day). Test 2 in class section this week, Friday May 31 1pm-1:50pm WLH 2001.  The test covers material in Weeks 5 through 8 and Monday of Week 9. To study for the exam, we recommend reviewing class notes (e.g. annotations linked on the class website, podcast, supplementary video from the class website), reviewing homework (and its posted sample solutions), and in particular *working examples* (extra examples in lecture notes, textbook examples listed in homework, review quizzes, discussion examples) and getting feedback (office hours and Piazza)",
         "ExpandInCalendar": false,
         "content": [
             {
@@ -671,147 +256,71 @@
                 "source": "Week9.tex"
             },
             {
-                "name": "(Video) Reducing A_TM to HALT_TM",
-                "source": "https://youtu.be/u8u7mYsZFWE"
+                "name": "(Video) Partial orders and Hasse Diagrams",
+                "source": "https://youtu.be/sH9znwj91Cs"
             },
             {
-                "name": "(Video) Mapping Reducation Applications",
-                "source": "https://youtu.be/ZlnndG0Jx1g"
+                "name": "(Video) Diffie-Hellman and cryptography",
+                "source": "https://youtu.be/oKOwGlevpyg"
             },
             {
-                "name": "(Video) Mapping Reduction Strategy",
-                "source": "https://youtu.be/uy81LdSiKtY"
-            },
-            {
-                "name": "(Video) ETM is undecidable, part 1",
-                "source": "https://youtu.be/7DcSDONFuRQ"
-            },
-            {
-                "name": "(Video) Reduce ATM to ETM complement",
-                "source": "https://youtu.be/GHq32eS0OoI"
-            },
-            {
-                "name": "(Video) Mapping reduction steps",
-                "source": "https://youtu.be/aJq-u_PnfH4"
-            },
-            {
-                "name": "(Video) EQTM",
-                "source": "https://youtu.be/x-1s7zUpiX0"
-            },
-            {
-                "name": "(Video) Equally expressive models",
-                "source": "https://youtu.be/kjeqnssKlAo"   
-            },
-            {
-                "name": "(Video) TM vs May Stay machines",
-                "source": "https://youtu.be/wl-NqDxgGr0"
-            },
-            {
-                "name": "(Video) Multitape TMs",
-                "source": "https://youtu.be/iRSNkWk_RWg"
-            },
-            {
-                "name": "(Video) Nondeterministic TMS",
-                "source": "https://youtu.be/H7hghfbNlDI"
-            },
-            {
-                "name": "(Video) Church-Turing thesis",
-                "source": "https://youtu.be/97gxo9R4kBU"
+                "name": "(Video) Modular Exponentiation",
+                "source": "https://youtu.be/-33d6BnYw94"
             }
         ],
-
         "Due Dates": [
             {
                 "name": "Test 2",
-                "due": "3/8/24 in discussion section"
+                "due": "5/31/24 in class"
             },
             {
-                "name": "Daily Review Quiz",
+                "name": "Review Quiz",
                 "link": "https://gradescope.com",
-                "due": "3/8/24 at 5pm (no penalty late submission until Sunday)"
+                "due": "5/31/24 at 5pm"
             }
         ]
     },
     {
         "header": "Week 10",
-        "outcomes": "Time Complexity: P vs. NP",
-        "CalendarInfo": " Dates: 3/11/24 - 3/17/24.",
+        "outcomes": "Relations and Clustering",
+        "CalendarInfo": " Dates: 6/3/24-6/7/24",
         "ExpandInCalendar": false,
         "content": [
             {
                 "name": "Notes",
                 "source": "Week10.tex"
-            },
-            {
-                "name": "(Video) Complexity motivation",
-                "source": "https://youtu.be/L63nHGGVktI"
-            },
-            {
-                "name": "(Video) Complexity first definitions",
-                "source": "https://youtu.be/0_j8kwbCADU"
-            },
-            {
-                "name": "(Video) Complexity classes examples",
-                "source": "https://youtu.be/trotNSb4eeM"
-            },
-            {
-                "name": "(Video) Complexity of ADFA",
-                "source": "https://youtu.be/_xeRF03tE1w"
-            },
-            {
-                "name": "(Video) Nondeterministic time complexity",
-                "source": "https://youtu.be/jZvsskEjKUo"
-            },
-            {
-                "name": "(Video) Feasible vs. verifiable",
-                "source": "https://youtu.be/u1BBxssqGfU"
-            },
-            {
-                "name": "(Video) Polynomial time reductions",
-                "source": "https://youtu.be/OUI8XwOnLqY"
-            },
-            {
-                "name": "(Video) Using polynomial time reductions",
-                "source": "https://youtu.be/SUPksCOlWBY"  
-            },
-            {
-                "name": "(Video) NP completeness",
-                "source": "https://youtu.be/9rTnDGbTOTk"
-            },
-            {
-                "name": "(Video) SAT is NP complete",
-                "source": "https://youtu.be/1LXV-7808mM"
             }
-        ], 
-
+        ],
         "Due Dates": [
             {
-                "name": "hw5CSE105W24",
-                "due": "3/14/24 at 5pm (no penalty late submission until 8am next day)"
+                "name": "hw6-proof-cardinality-relations-CSE20S24",
+                "due": "6/4/24 at 5pm (no penalty late submission until 8am next morning)"
             },
             {
-                "name": "Daily Review Quiz",
+                "name": "Review Quiz",
                 "link": "https://gradescope.com",
-                "due": "3/15/24 at 5pm (no penalty late submission until Sunday)"
+                "due": "6/7/24 at 5pm"
             }
         ]
     },
     {
         "header": "Finals week",
         "outcomes": "Final exam",
-        "CalendarInfo":  "Date: 3/18/24. The Final Exam is Monday March 18 at 3pm (see schedule of classes https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudent.htm)  in the REC GYM. <br><br>Assigned seats for the final exam will be posted on Canvas. Students who requested a left-handed seat for Test 1/Test 2 will be assigned to a left-handed seat in the final. <br><br>The Final Exam has two parts, the first corresponding to the material covered for Week 5's Test 1 and the second corresponding to the material covered for Week 9's Test 2. Each part has 4 questions and is scored out of 50 points.<br><br>You will have 65 minutes to complete each part and you can choose to take zero, one, or both of the parts.<br><br>We will distribute Part 1 at 3pm.  You may bring in one note sheet for Part 1. When we collect Part 1 exams, we will collect all note sheets and paper used during Part 1.<br><br>We will distribute Part 2 at 4:30pm.  You may bring in one note sheet for Part 2.  If you plan to take Part 1 and Part 2, make sure your note sheets are separate since we will collect Part 1's note sheet before distributing Part 2. If you plan to take Part 2 and not Part 1, please wait (quietly, to minimize disruption to those taking Part 1) outside the REC gym until we finish collecting all Part 1 exams and call you in.  When we collect Part 2 exams, we will collect all note sheets and paper used during Part 2.<br><br>The grade recorded for you for Test 1 will be max (Grade on Week 5's Test 1, Grade on Part 1 of Final). The grade recorded for you for Test 2 will be max (Grade on Week 9's Test 2, Grade on Part 2 of Final).",
-        "ExpandInCalendar": true,
+        "CalendarInfo":  "Dates: Final exam 6/13/24 11:30am",
+        "ExpandInCalendar": false,
         "content": [
             {
                 "name": "Final exam details",
-                "source": "<p>See syllabus and Canvas announcement (https://canvas.ucsd.edu/courses/51649/discussion_topics/748509) for details.</p>"
+                "source": "<p>TBA</p>"
             }
         ],
         "Due Dates": [
             {
                 "name": "Final exam",
-                "due": "3/18/24, 3pm-6pm. Room TBA."
+                "due": "Wednesday 6/13/24 at 11:30am"
             }
         ]
     }
+
+
 ]

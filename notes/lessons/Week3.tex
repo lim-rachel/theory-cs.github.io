@@ -1,76 +1,107 @@
 \input{../../resources/lesson-head.tex}
 
-\section*{Monday: Automata constructions}
-
-\input{../activity-snippets/week3-monday.tex}
-    
-\newpage
-\subsection*{Wednesday: Regular languages}
-
-\input{../activity-snippets/week3-wednesday.tex}
-
-
-\newpage
-\subsection*{Friday: Nonregular languages}
-
-\input{../activity-snippets/week3-friday.tex}
-
-\newpage
-
 \subsection*{Week 3 at a glance}
 
-\subsubsection*{Textbook reading: Chapter 1}
-
-{\it For Monday}: Pages 60-61 Theorem 1.47 and Theorem 1.48 (closure proofs).
-
-{\it For Wednesday}: Theorem 1.39 ``Proof Idea'', Example 1.41, Example 1.56, Example 1.58.
-
-{\it For Friday}: Introduction to Section 1.4 (page 77)
-
-{\it For Week 4 Monday}: Example 1.75, Example 1.77
-
-\subsubsection*{Make sure you can:}
+\subsubsection*{We will be learning and practicing to:}
+%applications of number representations
+%circuits
+%evaluating compound propositions
+%logical equivalence via laws
+%logical equivalence via truth tables
+%cnf and dnf
+%consistency
+%translating
 \begin{itemize}
-\item Explain nondeterminism and describe tools for simulating it with deterministic computation.
+\item Model systems with tools from discrete mathematics and reason about implications of modelling choices. Explore applications in CS through multiple perspectives, including software, hardware, and theory.
 \begin{itemize}
-    \item Find equivalent DFA for a given NFA
-
-    \item Convert between regular expressions and automata
- 
+    \item Determining the properties of positional number representations, including overflow and bit operations
+   \item Connecting logical circuits and compound proposition and tracing to calcluate output values
 \end{itemize}
 
-\item Use precise notation to formally define the state diagram of DFA, NFA and 
-use clear English to describe computations of DFA, NFA informally.
+\item Translate between different representations to illustrate a concept.
 \begin{itemize}
-   \item Determine the language recognized by a given NFA
-
-   \item Design general constructions for NFA
-
-   \item Choose between multiple models to prove that a language is regular
-\end{itemize}
-    
-\item Classify the computational complexity of a set of strings by determining whether it is regular
-\begin{itemize}
-    \item Explain the limits of the class of regular languages
-
+   \item Translating between symbolic and English versions of statements using precise mathematical language
 \end{itemize}
 
-\item Use the pumping lemma to prove that a given language is not regular.
+\item Use precise notation to encode meaning and present arguments concisely and clearly
 \begin{itemize}
-    \item Justify why the Pumping Lemma is true
-
+    \item Listing the truth tables of atomic boolean functions (and, or, xor, not, if, iff)
 \end{itemize}
+
+\item Know, select and apply appropriate computing knowledge and problem-solving techniques. Reason about computation and systems. Use mathematical techniques to solve problems. Determine appropriate conceptual tools to apply to new situations. Know when tools do not apply and try different approaches. Critically analyze and evaluate candidate solutions.
+\begin{itemize}
+    \item Evaluating compound propositions
+    \item Judging logical equivalence of compound propositions using symbolic manipulation with known equivalences, including DeMorgan's Law
+    \item Judging logical equivalence of compound propositions using truth tables
+    \item Rewriting compound propositions using normal forms
+    \item Judging whether a collection of propositions is consistent
+\end{itemize}
+
 \end{itemize}
 
 \subsubsection*{TODO:}
 \begin{list}
    {\itemsep2pt}
-   \item Review quizzes based on class material each day. 
-   \item Homework assignment 2 due next Thursday.
-   \item \begin{tabular}{p{4in}c}
-    Have you dropped by office hours yet? Find the schedule on the calendar: &   
-   \includegraphics[width=2in]{../../resources/images/officehourslink.png}
-   \end{tabular}
+   \item Review quiz based on class material each day (due Friday April 19, 2024)
+   \item Homework assignment 3 (due Tuesday April 23, 2024)
 \end{list}
 
+\newpage
+\section*{Week 3 Monday: Fixed-width Addition and Circuits}
+
+\input{../activity-snippets/fixed-width-addition.tex}
+\vfill
+\vfill
+\input{../activity-snippets/circuits-basics.tex}
+
+\input{../activity-snippets/logic-gates-definitions.tex}
+\vfill
+\input{../activity-snippets/digital-circuits-basic-examples.tex}
+\vfill
+\newpage
+\section*{Week 3 Wednesday: Propositional Logic}
+\input{../activity-snippets/half-adder-circuit.tex}
+\input{../activity-snippets/two-bit-adder-circuit.tex}
+\newpage
+\input{../activity-snippets/logical-operators.tex}
+\input{../activity-snippets/logical-operators-truth-tables.tex}
+\vfill
+\input{../activity-snippets/logical-operators-example-truth-table.tex}
+\vfill
+\newpage
+\section*{Week 3 Friday: Logical Equivalence}
+\input{../activity-snippets/truth-table-to-compound-proposition.tex}
+\input{../activity-snippets/dnf-cnf-definition.tex}
+\newpage
+\input{../activity-snippets/compound-proposition-definitions.tex}
+\input{../activity-snippets/logical-equivalence.tex}
+\vfill
+\input{../activity-snippets/tautology-contradiction-contingency-examples.tex}
+\vfill
+\input{../activity-snippets/logical-equivalence-extra-example.tex}
+\vfill
+\newpage
+\subsection*{Review Quiz}
+\begin{enumerate}
+    \item Fixed-width addition: Recall the definitions of signed integer representations from class: 
+    sign-magnitude and 2s complement.    
+        \begin{enumerate}
+            \item {\input{../activity-snippets/quiz-fixed-width-bounds.tex}}
+            \item {\input{../activity-snippets/quiz-fixed-width-addition.tex}}
+        \end{enumerate}
+    \newpage
+    \item Circuits
+        \begin{enumerate}
+            \item {\input{../activity-snippets/quiz-circuit-tracing.tex}}
+            \item {\input{../activity-snippets/quiz-circuit-implementing-operation.tex}}
+            \item \input{../activity-snippets/quiz-circuit-tracing-with-or.tex}
+        \end{enumerate}
+    \item Compound Propositions
+        \begin{enumerate}
+            \item \input{../activity-snippets/quiz-dnf-cnf-example.tex}
+            \item \input{../activity-snippets/quiz-cnf-dnf.tex}
+        \end{enumerate}
+    \item Logical equivalence.
+    \input{../activity-snippets/quiz-truth-values-or-and.tex}
+\end{enumerate}
 \end{document}
