@@ -1,49 +1,46 @@
 [
    {
-      "name": "hw1-definitions-and-notation-CSE20F21",
+      "name": "hw1-definitions-and-notation-CSE20S24",
       "addExtensions": true,
       "Information": "This is a group optional assignment",
-      "solutionsFile": "hw1-sol-CSE20F21.pdf"
+      "solutionsFile": "hw1-sample-solutions-definitions-and-notation-CSE20S24.pdf"
    },
    {
-      "name": "hw2-numbers-CSE20F21",
+      "name": "hw2-numbers-CSE20S24",
       "addExtensions": true,
       "Information": "This is a group optional assignment",
-      "solutionsFile": "hw2-sol-CSE20F21.pdf"
+      "solutionsFile": "hw2-solutions-CSE20S24.pdf"
    },
    {
-      "name": "hw3-circuits-and-logic-CSE20F21",
+      "name": "hw3-circuits-and-logic-CSE20S24",
       "addExtensions": true,
       "Information": "This is a group optional assignment",
-      "solutionsFile": "hw3-sol-CSE20F21.pdf"
+      "solutionsFile": "hw3-solutionsCSE20S24.pdf"
    },
    {
-      "name": "hw4-proofs-and-sets-CSE20F21",
+      "name": "test1practice-CSE20S24",
       "addExtensions": true,
-      "Information": "This is a group optional assignment",
-      "solutionsFile": "hw4-sol-CSE20F21.pdf"
+      "Information": "Test 1 is in class  this week, Friday May 3, 1pm-1:50pm WLH 2001.  The test covers material in Weeks 1 through 4 and Monday of Week 5. To study for the exam, we recommend reviewing class notes (e.g. annotations linked on the class website, podcast, supplementary video from the class website), reviewing homework (and its posted sample solutions), and in particular *working examples* (extra examples in lecture notes, review quizzes, discussion examples) and getting feedback (office hours and Piazza). This collection of practice questions may also be helpful, but is not meant to represent the actual length or format of the test.",
+      "solutionsFile": "test1practice-CSE20S24-sample-sol.pdf"
    },
    {
-      "name": "hw5-proofs-and-induction-CSE20F21",
+      "name": "hw4-proofs-and-sets-CSE20S24",
       "addExtensions": true,
-      "Information": "This is a group optional assignment",
-      "solutionsFile": "hw5-sol-CSE20F21.pdf"
+      "Information": "This is a group optional assignment"
    },
    {
-      "name": "hw6-proofs-numbers-cardinality-CSE20F21",
+      "name": "hw5-proofs-and-induction-CSE20S24",
       "addExtensions": true,
-      "Information": "This is a group optional assignment",
-      "solutionsFile": "hw6-sol-CSE20F21.pdf"
+      "Information": "This is a group optional assignment"
    },
    {
-      "name": "hw7-functions-and-relations-CSE20F21",
+      "name": "hw6-proof-cardinality-relations-CSE20S24",
       "addExtensions": true,
-      "Information": "This is a group optional assignment",
-      "solutionsFile": "hw7-sol-CSE20F21.pdf"
+      "Information": "This is a group optional assignment"
    },
    {
-      "name": "project-CSE20F21",
+      "name": "project-CSE20S24",
       "addExtensions": true,
-      "Information": "Part 1 due: 10/14/2021<br>Part 2 due: 11/4/2021<br>Part 3 due: 12/2/2021,<br>This is an Individual Assignment"
+      "Information": "This is an Individual Assignment"
    }
 ]

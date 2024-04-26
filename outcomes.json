@@ -103,7 +103,7 @@
                         "Description": "Tracing and/or modifying a proof by contradiction"
                     },
                     "using proofs to evaluate": {
-                        "Description": "Using proofs to as knowledge discovery tools to decide whether a statement is true or false"
+                        "Description": "Using proofs as knowledge discovery tools to decide whether a statement is true or false"
                     }
                 },
                 "Icon": "P",

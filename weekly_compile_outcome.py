@@ -27,7 +27,8 @@ low_levels = []
 for (k, v) in outcomes.items():
   for (k2, v2) in v["Children"].items():
     for k3 in v2["Children"].keys():
-      low_levels.append(k3.replace(" ", "-").lower()) 
+        # low_levels.append(k3.replace(" ", "-").lower()) 
+        low_levels.append(k3.replace(" ", "-")) 
 
 #TODO : remove todooutcome as a key (should be here until all todooutcomes are removed though)
 low_levels.append("todooutcome")
@@ -39,7 +40,7 @@ low_levels.append("todooutcome")
 lowLevelsDict = {}
 for line in low_levels:
     # Each dictionary has the low_levels as key and empty array as value
-    lowLevelsDict[line] = []
+    lowLevelsDict[line.lower()] = []
 
 # A function that returns the week of the snippet (key for later sort)
 def findWeek(element):
@@ -80,6 +81,9 @@ for filename in os.listdir(weeklyDirectory):
     
 
     Lines = weekly.readlines()
+
+    # for k in lowLevelsDict:
+        # print(k + ": " + str(lowLevelsDict[k]) + "\n")
 
     for line in Lines: 
         if (line.startswith("\input{../")) and not ("lesson-head.tex" in line):
@@ -149,18 +153,7 @@ for filename in os.listdir(weeklyDirectory):
                 lowLevelsDict[test].sort(key=findWeek)
 
 #debug: UNCOMMENT if want to see how the dictionary looks
-#print(lowLevelsDict)
-
-# def write_if_different(filename, contents):
-#     try:
-#         old_contents = open(filename).read()
-#         if old_contents == contents: return
-#     except FileNotFoundError:
-#         pass # If the file doesn't exist, continue so we can create it!
-#     result_file = open(filename, "w")
-#     result_file.write(contents)
-#     result_file.close()
-
+# print(lowLevelsDict)
 
 #Iterate through the dict
 for key in lowLevelsDict:

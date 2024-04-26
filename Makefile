@@ -31,6 +31,7 @@ generated/last-index.txt: *.json *.py notes/lessons/*.tex notes/assignments/*.te
 	mkdir -p generated/notes/activity-snippets-flat
 	python3 weekly_compile_app.py
 	python3 weekly_compile_outcome.py
+	python3 assignments_compiled.py
 	touch generated/last-index.txt
 
 
@@ -81,7 +82,7 @@ generated/notes/app-flat/%.tex: generated/notes/app/%.tex resources/lesson-head.
 	mkdir -p generated/notes/app-flat; cd generated/notes/app; latexpand $(<F) > ../app-flat/$(<F)
 
 # generate expanded/flat version of lessons compiled tex files
-generated/notes/lessons-flat/%.tex: generated/notes/lessons/%.tex resources/lesson-head.tex resources/discrete-math-packages.tex 
+generated/notes/lessons-flat/%.tex: notes/lessons/%.tex resources/lesson-head.tex resources/discrete-math-packages.tex 
 	mkdir -p generated/notes/lessons-flat; cd generated/notes/lessons; latexpand $(<F) > ../lessons-flat/$(<F)
 
 # Build website by copying over files, notes, resources, html, and style files to generated directory
@@ -108,8 +109,8 @@ generated/notes/%: notes/% ./notes/*/*
 	mkdir -p $@
 	cp -R $</ $@
 
-# # Directory notes/activity-snippets contains tex files for outcomes and outcomes 
-# generated-notes-activity-snippets: $(patsubst notes/activity-snippets/%,generated/notes/activity-snippets/%,$(wildcard notes/activity-snippets/*))
+# Directory notes/activity-snippets contains tex files for outcomes and outcomes 
+ generated-notes-activity-snippets: $(patsubst notes/activity-snippets/%,generated/notes/activity-snippets/%,$(wildcard notes/activity-snippets/*))
 
 # generated/notes/activity-snippets/%: notes/activity-snippets/%
 # 	mkdir -p generated/notes/activity-snippets
@@ -133,7 +134,7 @@ generated/website/%: custom-html/%
 # 	mkdir -p generated/website/css
 # 	cp $< $@
 
-# Building dynamic html pages based on unit template, outcome (TODO: rename as outcome) template
+# Building dynamic html pages based on unit template, outcome template
 # application template, and overview pages. These dynamic html pages are created
 # directly in the generated directory
 dynamic-pages: 
